@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gully Cricket Scorecard</title>
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container scorecard-container">
+    <div class="text-center mb-4">
+      <h2 class="text-white">🏏 Gully Cricket Scorecard</h2>
+    <p class="text-secondary" style="color: silver;">Let the Game Begin</p>
+    </div>
+
+    <div class="row text-center mb-3">
+      <div class="col-5">
+        <div class="team-score text-primary"><span id="team1Display">Team1</span>: <span id="score1">0/0</span></div>
+      </div>
+    <div class="col-2" style="color: gold; font-size: 2rem; font-weight: bold;">vs</div>
+      <div class="col-5">
+        <div class="team-score text-success"><span id="team2Display">Team2</span>: <span id="score2">-</span></div>
+      </div>
+    </div>
+
+    <div class="row text-center mb-4">
+      <div class="col">
+        <div>Overs: <span id="overCount">0.0</span></div>
+        <div>Target: <span id="target">-</span></div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <div class="section-title">Add Runs</div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-lg" style="background: #6c757d; color: #fff; border: none;" data-run="0">Dot</button>
+          <button class="btn btn-lg" style="background: #ff69b4; color: #fff; border: none;" data-run="1">1</button>
+          <button class="btn btn-lg" style="background: #ced4da; color: #212529; border: none;" data-run="2">2</button>
+        <button class="btn btn-lg" style="background: linear-gradient(90deg, #ffe259 0%, #ffa751 100%); color: #fff; border: none;" data-run="3">3</button>
+          <button class="btn btn-lg" style="background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%); color: #fff; border: none;" data-run="4">4</button>
+          <button class="btn btn-lg" style="background: linear-gradient(90deg, #ff512f 0%, #f09819 100%); color: #fff; border: none;" data-run="6">6</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="section-title">Extras & Wickets</div>
+        <div class="d-flex flex-wrap gap-2">
+          <button class="btn btn-warning" id="wide">Wide</button>
+          <button class="btn btn-danger" id="wicket">Wicket</button>
+          <button class="btn btn-secondary" id="noball">No Ball</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <div class="section-title">Current Over</div>
+        <div id="ballsContainer"></div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-outline-info" id="switch">Switch Innings</button>
+      <button class="btn btn-outline-light" id="reset">Reset Match</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
